@@ -64,12 +64,12 @@ function endWorker() {
 
 // Promise
 
-let prom1 = new Promise((resolve, reject)=>{
+let promise = new Promise((resolve, reject)=>{
 	resolve("Successful");
 })
 .then(e=>{ 
-			console.log(e)
-			return "Completed"
+	console.log(e)
+	return "Completed"
 	})
 .then(e=>{console.log(e)})
 
