@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="quote-container">
+        <h2 id="title">Random Quote Generator</h2>
+        <blockquote class="quote"></blockquote>
+        <button class="new-quote-btn">Generate New Quote</button>
+    </div>
+    <div id="worker">
+        <button id ="worker-1" onclick="startWorker()">Start Worker</button> 
+        <button id ="worker-2" onclick="endWorker()">End Worker</button> 
+        <p>Seconds Passed: <output id="result"></output></p>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

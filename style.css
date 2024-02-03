@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #848871;
+}
+#quote-container {
+    background-color: #262b15;
+    color: #afb4ad;
+    text-align: center;
+    max-width: 600px;
+    padding-bottom: 100px;
+    border: 5px solid #464b37;
+    border-radius: 10px;
+}
+.new-quote-btn {
+    background-color: #848871;
+    padding: 10px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+#worker {
+    padding-top: 15px;
+}
+#worker-1 {
+    background-color: #afb4ad;
+}
+#worker-2 {
+    background-color: #afb4ad;
+}
