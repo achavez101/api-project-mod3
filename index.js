@@ -110,8 +110,40 @@ Promise.all([
 const promises = [color, welcomeFunction];
 Promise.any(promises).then((values) => console.log(values));
 
+// Activity for Likes
+fetch("http://www.boredapi.com/api/activity")
+.then(response => response.json())
+.then (object => {
+  displayActivities(object);
+});
+
+function displayActivities(object) {
+  const activityList = document.getElementById('like-list');
+  const APIMove = document.createElement('p');
+  APIMove.innerTML = object.activity;
+
+  const heartButton = document.createElement('button');
+  heartButton.innerHTML = "Like" + '<i class="fa-solid fa-heart fa-sm"></i>';
 
 
+  const likeCount = document.createElement('p');
+  
+  let likes = 0;
+
+  function increaseLikes() {
+    likes++; 
+    if(likes == 1) {
+      likeCount.innerHTML = `${likes} like`;
+    }
+    else if (likes != 1) {
+      likeCount.innerHTML = `${likes} likes`;
+    }
+  }
+  heartButton.addEventListener('click', increaseLikes);
+  APIMove.appendChild(heartButton); 
+  APIMove.appendChild(likeCount);
+  activityList.appendChild(APIMove);
+}
 
 
 // API failed to work

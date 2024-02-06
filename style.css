@@ -15,7 +15,7 @@ body {
     color: #afb4ad;
     text-align: center;
     max-width: 600px;
-    padding-bottom: 100px;
+    padding-bottom: 25px;
     border: 5px solid #464b37;
     border-radius: 10px;
 }
@@ -35,4 +35,7 @@ body {
 }
 #worker-2 {
     background-color: #afb4ad;
+}
+.fa-heart {
+    color: #df1111;
 }
