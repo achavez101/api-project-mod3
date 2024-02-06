@@ -7,6 +7,9 @@ body {
     align-items: center;
     background-color: #848871;
 }
+#promise {
+    color: #262b15;
+}
 #quote-container {
     background-color: #262b15;
     color: #afb4ad;
