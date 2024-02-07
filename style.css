@@ -14,12 +14,23 @@ body {
     background-color: #262b15;
     color: #afb4ad;
     text-align: center;
+    width: 400px;
     max-width: 600px;
     padding-bottom: 25px;
     border: 5px solid #464b37;
     border-radius: 10px;
 }
-.new-quote-btn {
+#type-container {
+    background-color: #262b15;
+    color: #afb4ad;
+    text-align: center;
+    width: 400px;
+    max-width: 600px;
+    padding-bottom: 25px;
+    border: 5px solid #464b37;
+    border-radius: 10px;
+}
+.new-quote-btn, .type-quote-btn {
     background-color: #848871;
     padding: 10px 20px;
     font-size: 12px;

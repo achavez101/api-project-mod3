@@ -36,6 +36,9 @@ async function fetchQuote(){
 }
 fetchQuote();
 
+
+
+
 // web worker 
 // followed by a button to start and stop an action
 var worker;
@@ -144,6 +147,33 @@ function displayActivities(object) {
   APIMove.appendChild(likeCount);
   activityList.appendChild(APIMove);
 }
+
+// quotes with less than 50 characters
+const API_type = 'https://api.quotable.io/quotes/random?maxLength=50'
+
+const typeContainer = document.querySelector('.typeQuote');
+const newTypeBtn = document.querySelector('.type-quote-btn');
+document.addEventListener('DOMContentLoaded', typeQuote);
+
+newTypeBtn.addEventListener('click', typeQuote)
+
+async function typeQuote(){
+    try {
+        const typeResult = await fetch(API_URL)
+        const typeQuote = await typeResult.json()
+        typeContainer.innerHTML = `
+            <p>${typeQuote.content}</p>
+            <cite><strong>Author:</strong> ${typeQuote.author}</cite>
+            <p><strong>Type of Quote:</strong> ${typeQuote.tags[0]}</p>
+            <p><strong>Date Added:</strong> ${typeQuote.dateAdded}</p>
+        `
+        localStorage.setItem(typeQuote, JSON.stringify(typeQuote));
+        // console.log(quote);
+    } catch (error) {
+        console.error('no quote for type');
+    }
+}
+typeQuote();
 
 
 // API failed to work
